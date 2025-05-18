@@ -68,8 +68,6 @@ Una vez cambiada la configuración, reiniciamos el servicio o en el caso de que 
 docker-compose restart webserver
 ~~~
 
-![](images/rfi1.png)
-
 
 Aquí puedes encontrar el fichero de configuración [php.ini](files/php.ini.rfi).
 
@@ -103,7 +101,7 @@ if (isset($_GET['file'])) {
 
 ~~~ 
 
-![](images/rfi3.png)
+![](images/imagen3.png)
 
 ### Explotación de RFI
 ---
@@ -123,7 +121,7 @@ echo "¡Servidor comprometido!";
 En esta ocasión sólo nos mostrará un mensaje, pero podría hacer muchas cosas más.
 
 Para ejecutarlo a través de la aplicación vulnerable colocando su dirección en nuestro campo
-![](images/rfi3.png)
+![](images/imagen3.png)
 
 
 o bien concatenamos su dirección a la de nuestro archivo rfi.php:
@@ -135,7 +133,7 @@ http://localhost/rfi.php?file=http://localhost/exploit.php
 
 Si el código del atacante se ejecuta en el servidor víctima, significa que la aplicación es vulnerable.
 
-![](images/rfi2.png)
+![](images/imagen2.png)
 
 **Posibles efectos del ataque:**
 
@@ -179,7 +177,7 @@ if (isset($_GET['file'])) {
 ~~~
 Como vemos ya no nos deja meter direcciones url, ya que aplicamos un filtro de validación de URLs.
 
-![](images/rfi3.png)
+![](images/imagen4.png)
 
 Sin embargo, esta solución no es suficiente, ya que aún permite archivos locales maliciosos.
 
